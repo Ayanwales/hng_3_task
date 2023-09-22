@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import ImageGallery from "react-image-gallery";
+import './Home.css'
 import useFileSelection  from '../../hooks/useFileSelection';
 import DragAndDrop from '../../components/DragAndDrop/DragAndDrop';
 import { logoutUser } from '../../firebase';
@@ -6,6 +8,27 @@ import Loading from '../../components/Loader/Loading';
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [addFile, removeFile] = useFileSelection();
+  const [images, setImages] = useState([ {
+    original: "https://picsum.photos/id/1024/1000/600/",
+    thumbnail: "https://picsum.photos/id/1024/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1025/1000/600/",
+    thumbnail: "https://picsum.photos/id/1025/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1026/1000/600/",
+    thumbnail: "https://picsum.photos/id/1026/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1027/1000/600/",
+    thumbnail: "https://picsum.photos/id/1027/250/150/",
+  },
+  {
+    original: "https://picsum.photos/id/1029/1000/600/",
+    thumbnail: "https://picsum.photos/id/1029/250/150/",
+  },]);
+
 
   const request = ()=>{
     new Promise(resolve => setTimeout(()=> resolve(), 10000));
@@ -23,6 +46,9 @@ const Home = () => {
         <div className='card' style={{ margin: 'auto', width: '50%'  }}>
           <DragAndDrop addFile={addFile} removeFile={removeFile}/>         
         </div>
+        <div className="image-gallery-wrapper">
+        <ImageGallery items={images} />
+      </div>
       </div>
       <button onClick={logoutUser}>
         Logout
