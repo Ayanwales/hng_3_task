@@ -4,7 +4,8 @@ import { getAuth,
       signInWithEmailAndPassword,
       signOut
  } from 'firebase/auth'
-
+ import { getStorage } from "firebase/storage";
+ import { getFirestore } from "firebase/firestore";
 const firebaseConfig ={
       apiKey: "AIzaSyC-7l2Q7tB7pEVkZxz_yK4EC6p074M1E5A",
       authDomain: "auth-form-21268.firebaseapp.com",
@@ -35,3 +36,7 @@ export const logoutUser = () => {
         console.log(errorCode);
       });
     };
+    export const storage = getStorage();
+const db = getFirestore();
+
+export { db };

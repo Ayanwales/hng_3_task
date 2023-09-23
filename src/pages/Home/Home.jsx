@@ -5,6 +5,8 @@ import useFileSelection  from '../../hooks/useFileSelection';
 import DragAndDrop from '../../components/DragAndDrop/DragAndDrop';
 import { logoutUser } from '../../firebase';
 import Loading from '../../components/Loader/Loading';
+//import ImageUpload from '../../components/ImageUpload/ImageUpload';
+//import Image from '../../components/ImageGallery/Image';
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [addFile, removeFile] = useFileSelection();
@@ -50,6 +52,8 @@ const Home = () => {
         <ImageGallery items={images} />
       </div>
       </div>
+      {/*<Image />
+      <ImageUpload/>*/}
       <button onClick={logoutUser}>
         Logout
       </button>

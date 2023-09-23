@@ -20,7 +20,8 @@ const Register = () => {
   const handleRegister = () => {
     registerUser(email, password)
       .then((userCredential) => {
-        alert('User created successfully!')
+        alert('User created successfully!');
+        navigate('/Login')
       })
       .catch((error) => {
         alert('Something went wrong!')
@@ -28,7 +29,7 @@ const Register = () => {
         console.log(errorCode);
       });
       setEmail('');
-      setPassword('')
+      setPassword('');
   }
 
   return (
@@ -57,7 +58,7 @@ const Register = () => {
       <div style={{ fontSize: '12px' }}>
           Already have an account? Please {' '}
           <span 
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/Login')}
             style={{ color: '#293462', fontWeight: 'bold', cursor: 'pointer' }}
           >
             sign in

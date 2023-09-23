@@ -56,7 +56,7 @@ const Login = () => {
     <div style={{ fontSize: '12px' }}>
         Dont't have an account? Register {' '}
         <span 
-          onClick={() => navigate('/register')}
+          onClick={() => navigate('/')}
           style={{ color: '#293462', fontWeight: 'bold', cursor: 'pointer' }}
         >
           here

@@ -1,0 +1,60 @@
+.imageupload-container {
+    padding: 100px 5%;
+    text-align: center;
+  }
+  
+  .drop-zone {
+    border: 2px dashed rgba(0, 123, 255, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .imageupload-container img {
+    margin: auto;
+    width: 200px;
+  }
+  
+  .tags {
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    outline: none;
+    width: 500px;
+    margin: auto;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .imageupload-container img {
+      margin: auto;
+      width: 100%;
+    }
+    .tags {
+      width: 100%;
+    }
+  }

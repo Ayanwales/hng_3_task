@@ -5,6 +5,8 @@
     border-radius: 20px;
     flex-direction: column;
     margin: auto;
+    box-shadow: 2px 2px  2px whitesmoke;
+    background-color: turquoise;
     Align-items:center;
   }
   input[type=text], input[type=password] {
